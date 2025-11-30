@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HabitFlow — Login</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="login-bg">
+
+<div class="login-container glass-card">
+
+    <div class="logo-icon">
+        <div class="logo-dot"></div>
+    </div>
+
+    <h2 class="login-title">Welcome to HabitFlow</h2>
+    <p class="login-subtitle">Minimal · Modern · Productive</p>
+
+    <input id="username" class="login-input" placeholder="Your Name" />
+    <input id="email" class="login-input" placeholder="Email (optional)" />
+
+    <button id="loginBtn" class="btn login-btn">Sign In</button>
+
+    <p class="login-note">Session stored securely in your browser</p>
+
+</div>
+
+<script>
+document.getElementById("loginBtn").onclick = () => {
+    const user = document.getElementById("username").value.trim();
+    if (!user) return alert("Please enter your name");
+    localStorage.setItem("hf_user", user);
+    window.location.href = "index.html";
+};
+</script>
+
+</body>
+</html>

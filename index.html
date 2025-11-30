@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HabitFlow — Modern Minimal</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>HabitFlow</h1>
+    <p class="tag">Minimal · Modern · Productive</p>
+  </div>
+  <div class="actions">
+    <button id="addBtn" class="btn accent">+ New</button>
+    <button id="logoutBtn" class="btn ghost">Logout</button>
+  </div>
+</header>
+
+<main class="main">
+  <section class="panel add-panel">
+    <div class="input-wrap">
+      <input id="habitInput" placeholder="Add a new habit (e.g. Drawing, Reading, Yoga)"/>
+      <select id="iconType">
+        <option value="combined">Icon: Combined (img + svg + emoji)</option>
+        <option value="emoji">Emoji only</option>
+        <option value="svg">SVG only</option>
+        <option value="image">Thumbnail image</option>
+      </select>
+      <button id="addHabitBtn" class="btn primary">Add</button>
+    </div>
+    <div class="quick-presets">
+      <button class="chip" data-name="Drawing">🎨 Drawing</button>
+      <button class="chip" data-name="Reading">📚 Reading</button>
+      <button class="chip" data-name="Exercise">🏋️ Exercise</button>
+      <button class="chip" data-name="Meditation">🧘 Meditation</button>
+    </div>
+  </section>
+
+  <section id="habitGrid" class="grid">
+    <!-- habit cards injected here -->
+  </section>
+</main>
+
+<!-- modal -->
+<div id="modal" class="modal hidden" aria-hidden="true">
+  <div class="modal-card">
+    <button id="closeModal" class="close">✕</button>
+    <h3 id="modalTitle">Habit Details</h3>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer class="footer">2025 — HabitFlow</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
